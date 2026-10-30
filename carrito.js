@@ -313,7 +313,7 @@ document.getElementById("pagarMercadoPago").addEventListener(
 
         try {
             const respuesta = await fetch(
-                "http://localhost:3000/api/crear-pago",
+                    "https://haruko-api-agusfe1.onrender.com/api/crear-pago",
                 {
                     method: "POST",
                     headers: {
