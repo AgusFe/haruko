@@ -1,0 +1,829 @@
+
+/* COLORES DE HARUKO */
+:root {
+    --verde-haruko: #174D38;
+    --negro: #191919;
+    --crema: #F7F6F2;
+}
+
+/* ESTILO GENERAL */
+body {
+    margin: 0;
+    background-color: var(--crema);
+    color: var(--negro);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ENCABEZADO */
+.haruko-navbar {
+    min-height: 88px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E8E6E0;
+}
+
+/* LOGO */
+.haruko-logo {
+    color: var(--verde-haruko) !important;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+/* ENLACES DEL MENÚ */
+.haruko-navbar .nav-link {
+    color: var(--negro);
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 12px 16px;
+}
+
+/* EFECTO AL PASAR SOBRE UN ENLACE */
+.haruko-navbar .nav-link:hover {
+    color: var(--verde-haruko);
+}
+
+/* BOLSA DE COMPRA */
+.haruko-navbar .bag-link {
+    border: 1px solid var(--verde-haruko);
+    padding: 12px 16px;
+}
+
+/* ESPACIO DEL MENÚ EN CELULARES */
+@media (max-width: 991px) {
+    .haruko-navbar .navbar-collapse {
+        padding: 16px 0;
+    }
+
+    .haruko-navbar .nav-link {
+        padding: 12px 0;
+    }
+
+    .haruko-navbar .bag-link {
+        display: inline-block;
+        margin-top: 8px;
+    }
+}
+
+____________________________________
+
+
+/* =================================
+   PORTADA PRINCIPAL DE HARUKO
+================================= */
+
+.hero {
+    position: relative;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #777777;
+}
+
+/* Fotografía de fondo */
+
+.hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+/* Capa para que se lea el texto */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.60) 0%,
+        rgba(0, 0, 0, 0.25) 55%,
+        rgba(0, 0, 0, 0.05) 100%
+    );
+    z-index: 1;
+}
+
+/* Texto de portada */
+
+.hero-copy {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    padding: 90px 7%;
+    color: #FFFFFF;
+}
+
+/* Texto pequeño superior */
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+/* Título principal */
+
+.hero h1 {
+    max-width: 620px;
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+}
+
+/* Descripción */
+
+.hero-description {
+    max-width: 400px;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Botón de la colección */
+
+.btn-haruko {
+    background-color: #174D38;
+    color: #FFFFFF;
+    border: 1px solid #174D38;
+    border-radius: 0;
+    padding: 15px 24px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-haruko:hover {
+    background-color: #B51F28;
+    border-color: #B51F28;
+    color: #FFFFFF;
+}
+
+/* Adaptación a celulares */
+
+@media (max-width: 576px) {
+
+    .hero {
+        min-height: 520px;
+    }
+
+    .hero-copy {
+        padding: 60px 24px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+}
+
+
+/* ENCABEZADO HARUKO */
+header {
+    position: relative;
+    z-index: 10;
+    background-color: #FFFFFF;
+}
+
+.haruko-navbar {
+    min-height: 88px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E8E6E0;
+}
+
+.haruko-logo {
+    color: #174D38 !important;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    text-decoration: none;
+}
+
+.haruko-navbar .nav-link {
+    color: #191919;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 12px 16px;
+}
+
+.haruko-navbar .nav-link:hover {
+    color: #174D38;
+}
+
+.haruko-navbar .bag-link {
+    border: 1px solid #174D38;
+}
+
+@media (max-width: 991px) {
+    .haruko-navbar .navbar-collapse {
+        padding: 16px 0;
+    }
+}
+
+/* ================================
+   CATÁLOGO DE HARUKO
+================================ */
+
+/* Sección completa */
+.catalogo {
+    background-color: #F7F6F2;
+    padding-top: 85px;
+    padding-bottom: 100px;
+}
+
+/* Encabezado del catálogo */
+.catalogo-header {
+    padding: 0 5% 45px;
+}
+
+.catalogo-header .eyebrow {
+    color: #174D38;
+    margin-bottom: 18px;
+}
+
+.catalogo-header h2 {
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 400;
+    letter-spacing: -1.5px;
+    margin-bottom: 18px;
+}
+
+.catalogo-descripcion {
+    max-width: 420px;
+    color: #777777;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Tarjetas de productos */
+.producto {
+    height: 100%;
+}
+
+/* Fotografía de cada prenda */
+.producto-foto {
+    overflow: hidden;
+    background-color: #EAE8E2;
+    aspect-ratio: 3 / 4;
+}
+
+.producto-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Efecto al pasar el cursor */
+.producto:hover .producto-foto img {
+    transform: scale(1.04);
+}
+
+/* Categoría */
+.producto-categoria {
+    margin-top: 18px;
+    margin-bottom: 8px;
+    color: #777777;
+    font-size: 9px;
+    letter-spacing: 1.3px;
+}
+
+/* Nombre de la prenda */
+.producto h3 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+/* Precio */
+.producto-precio {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+/* Enlace a cada producto */
+.producto-enlace {
+    color: #174D38;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #174D38;
+}
+
+.producto-enlace:hover {
+    color: #B51F28;
+    border-color: #B51F28;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 576px) {
+
+    .catalogo {
+        padding-top: 55px;
+        padding-bottom: 60px;
+    }
+
+    .catalogo-header {
+        padding-bottom: 30px;
+    }
+
+    .producto h3 {
+        font-size: 13px;
+    }
+
+    .producto-categoria {
+        font-size: 8px;
+    }
+
+}
+
+
+/* ====================================
+   FICHA COMPLETA DE PRODUCTO
+==================================== */
+
+.pagina-producto {
+    padding-top: 24px;
+    padding-bottom: 90px;
+    background-color: #FFFFFF;
+}
+
+/* Ruta de navegación */
+.migas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+    color: #777777;
+    font-size: 11px;
+}
+
+.migas a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.migas a:hover {
+    color: #174D38;
+}
+
+/* Fotografía */
+.foto-detalle {
+    background-color: #F1F0EB;
+    overflow: hidden;
+}
+
+.foto-detalle img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 850px;
+    object-fit: contain;
+}
+
+/* Información del producto */
+.detalle-info {
+    padding: 10px 0 0;
+}
+
+.detalle-categoria {
+    color: #174D38;
+    font-size: 10px;
+    letter-spacing: 1.7px;
+    margin-bottom: 20px;
+}
+
+.detalle-info h1 {
+    color: #191919;
+    font-size: clamp(30px, 3vw, 43px);
+    line-height: 1.15;
+    font-weight: 400;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+}
+
+.detalle-precio {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.detalle-descripcion {
+    color: #696969;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 440px;
+}
+
+.separador-detalle {
+    border-color: #DAD8D1;
+    margin: 28px 0;
+}
+
+/* Opciones de compra */
+.etiqueta-compra {
+    display: block;
+    color: #174D38;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 9px;
+}
+
+.detalle-info .form-select,
+.detalle-info .form-control {
+    border-radius: 0;
+    border-color: #D8D5CC;
+    padding: 13px;
+    font-size: 13px;
+    box-shadow: none;
+}
+
+.detalle-info .form-select:focus,
+.detalle-info .form-control:focus {
+    border-color: #174D38;
+}
+
+/* Botón para agregar a la bolsa */
+.btn-agregar {
+    background-color: #174D38;
+    border: 1px solid #174D38;
+    color: #FFFFFF;
+    border-radius: 0;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+}
+
+.btn-agregar:hover {
+    background-color: #103728;
+    border-color: #103728;
+    color: #FFFFFF;
+}
+
+/* Botón de WhatsApp */
+.btn-whatsapp {
+    background-color: #FFFFFF;
+    border: 1px solid #174D38;
+    color: #174D38;
+    border-radius: 0;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #F1F0EB;
+    color: #174D38;
+}
+
+/* Mensajes de confirmación */
+.mensaje-compra {
+    margin-top: 15px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Información adicional */
+.informacion-envio {
+    border-top: 1px solid #E4E1D9;
+    margin-top: 30px;
+    padding-top: 22px;
+    color: #777777;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.informacion-envio p:first-child {
+    color: #191919;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* Pie de la ficha */
+.footer-haruko {
+    background-color: #191919;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logo-pie {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.footer-haruko p {
+    margin: 12px 0;
+    color: #D6D6D0;
+    font-size: 13px;
+}
+
+.footer-haruko > a:last-child {
+    color: #FFFFFF;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* Celulares */
+@media (max-width: 991px) {
+    .pagina-producto {
+        padding-top: 18px;
+        padding-bottom: 55px;
+    }
+
+    .migas {
+        margin-bottom: 22px;
+    }
+
+    .detalle-info {
+        padding-top: 15px;
+    }
+
+    .foto-detalle img {
+        max-height: none;
+    }
+}
+
+
+/* =====================================
+   HARUKO - BOLSA DE COMPRA
+===================================== */
+
+.carrito-pagina {
+    background: #F7F6F2;
+    padding-top: 55px;
+    padding-bottom: 90px;
+    min-height: 65vh;
+}
+
+.carrito-encabezado {
+    padding-bottom: 42px;
+    border-bottom: 1px solid #DDDAD2;
+    margin-bottom: 35px;
+}
+
+.carrito-encabezado .eyebrow {
+    color: #174D38;
+}
+
+.carrito-encabezado h1 {
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 400;
+    letter-spacing: -1.5px;
+    margin: 15px 0;
+}
+
+.carrito-encabezado > p:last-child {
+    color: #777;
+    font-size: 14px;
+}
+
+.carrito-lista-encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.carrito-lista-encabezado h2,
+.resumen-carrito h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.item-carrito {
+    display: grid;
+    grid-template-columns: 130px minmax(0, 1fr) auto;
+    gap: 22px;
+    padding: 24px 0;
+    border-top: 1px solid #DDDAD2;
+    align-items: start;
+}
+
+.item-carrito-foto img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    background: #EBE9E2;
+}
+
+.imagen-fallida,
+.foto-no-disponible {
+    background: #EBE9E2;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #174D38;
+    font-size: 12px;
+}
+
+.item-categoria {
+    color: #174D38;
+    font-size: 9px;
+    letter-spacing: 1px;
+    margin-bottom: 9px;
+}
+
+.item-carrito-info h3 {
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.item-carrito-info > p:not(.item-categoria) {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.item-carrito-info .precio-unitario {
+    color: #191919;
+    margin-top: 12px;
+}
+
+.item-carrito-total {
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.controles-cantidad {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #D6D3CB;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.controles-cantidad button {
+    width: 34px;
+    height: 34px;
+    border: 0;
+    background: transparent;
+    color: #174D38;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.controles-cantidad button:disabled {
+    color: #AAA;
+    cursor: not-allowed;
+}
+
+.controles-cantidad span {
+    min-width: 30px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.enlace-eliminar {
+    display: inline-block;
+    color: #666;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    text-decoration: underline;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.enlace-eliminar:hover {
+    color: #B51F28;
+}
+
+.resumen-carrito {
+    background: #FFFFFF;
+    padding: 28px;
+    border: 1px solid #E2DFD7;
+    position: sticky;
+    top: 20px;
+}
+
+.resumen-carrito h2 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E5E2DB;
+}
+
+.resumen-linea {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 13px;
+    margin: 20px 0;
+}
+
+.resumen-total {
+    font-size: 16px;
+    font-weight: 600;
+    border-top: 1px solid #E5E2DB;
+    padding-top: 20px;
+}
+
+.nota-carrito {
+    font-size: 11px;
+    line-height: 1.7;
+    color: #777;
+    margin: 22px 0;
+}
+
+.btn-carrito {
+    color: #FFFFFF;
+    background: #174D38;
+    border: 1px solid #174D38;
+    border-radius: 0;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 15px;
+}
+
+.btn-carrito:hover {
+    background: #103728;
+    border-color: #103728;
+    color: #FFFFFF;
+}
+
+.seguir-comprando {
+    display: inline-block;
+    color: #174D38;
+    font-size: 11px;
+    margin-top: 22px;
+    text-decoration: none;
+}
+
+.seguir-comprando:hover {
+    text-decoration: underline;
+}
+
+.mensaje-carrito {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 15px;
+    overflow-wrap: anywhere;
+}
+
+.carrito-vacio {
+    text-align: center;
+    padding: 70px 15px 100px;
+}
+
+.carrito-vacio h2 {
+    font-size: 27px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.carrito-vacio p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 576px) {
+    .carrito-pagina {
+        padding-top: 35px;
+        padding-bottom: 55px;
+    }
+
+    .item-carrito {
+        grid-template-columns: 95px minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .item-carrito-total {
+        grid-column: 2;
+        margin-top: -8px;
+    }
+
+    .item-carrito-info h3 {
+        font-size: 15px;
+    }
+
+    .resumen-carrito {
+        padding: 22px;
+        position: static;
+    }
+}
