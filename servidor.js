@@ -86,7 +86,7 @@ app.post('/api/crear-pago', async (req, res) => {
     }
 });
 // INICIAR SERVIDOR HARUKO
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
     console.log(`Servidor HARUKO activo en http://localhost:${PORT}`);
