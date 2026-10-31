@@ -264,6 +264,7 @@ function activarAlternativasDeImagen() {
 }
 
 
+
 // CAMBIAR CANTIDAD O ELIMINAR PRENDAS
 document.getElementById("listaCarrito").addEventListener(
     "click",
@@ -294,11 +295,15 @@ document.getElementById("listaCarrito").addEventListener(
             return;
         }
 
-        // PAGAR CON MERCADO PAGO
+        mostrarBolsa();
+    }
+);
+
+
+// PAGAR CON MERCADO PAGO
 document.getElementById("pagarMercadoPago").addEventListener(
     "click",
     async function () {
-
         const bolsa = leerBolsa();
 
         if (bolsa.length === 0) {
@@ -313,7 +318,7 @@ document.getElementById("pagarMercadoPago").addEventListener(
 
         try {
             const respuesta = await fetch(
-                    "https://haruko-api-agusfe1.onrender.com/api/crear-pago",
+                "https://haruko-api-agusfe1.onrender.com/api/crear-pago",
                 {
                     method: "POST",
                     headers: {
@@ -341,11 +346,8 @@ document.getElementById("pagarMercadoPago").addEventListener(
             );
 
             boton.disabled = false;
-            boton.textContent = "PAGAR CON MERCADO PAGO";
+            boton.textContent = "PAGO ONLINE";
         }
-    }
-);
-        mostrarBolsa();
     }
 );
 
